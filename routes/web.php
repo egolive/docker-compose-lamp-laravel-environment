@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $club = factory(\App\Club::class)->create();
+
+    $club->members()->create([
+        'name' => 'Test'
+    ]);
+
+    dd($club->members);
 });
 
 Auth::routes();
