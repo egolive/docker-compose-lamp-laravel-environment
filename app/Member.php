@@ -12,4 +12,9 @@ class Member extends Model
     {
         return $this->belongsTo('App\Club');
     }
+
+    public function roles()
+    {
+        return $this->hasMany('App\Role');
+    }
 }
