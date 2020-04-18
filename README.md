@@ -3,7 +3,7 @@
 Management system of the HPBV for all administrative tasks.
 Programmed by DaluMa Websolutions.
 
-## docker-compose
+## docker-compose workflow
 
 VeVeTo uses a docker-compose workflow that sets up a LEMP network of containers for local development. 
 
