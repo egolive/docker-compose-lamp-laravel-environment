@@ -8,7 +8,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/do
 
 Open a terminal and run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost:8080](http://localhost:8080) and you should see the VeVeTo app running as intended. 
 
-The following containers that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates from your project root, modifiying them to fit your particular use case:
+The following containers that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates inside your project root.
 
 - `docker-compose run --rm composer update`
 - `docker-compose run --rm npm run dev`
