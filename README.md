@@ -48,3 +48,5 @@ Telescope is preconfigured, if you wanne use it execute the following commands.
 
 1. `dca telescope:install`
 2. `dca migrate`
+
+You can reach telesope at the following URL: [http://localhost:8080/telescope](http://localhost:8080/telescope)
