@@ -1,8 +1,14 @@
 # VeVeTo
-docker-compose workflow that sets up a LEMP network of containers for local VeVeTo development. 
+
+Management system of the HPBV for all administrative tasks.
+Programmed by DaluMa Websolutions.
+
+## docker-compose
+
+VeVeTo uses a docker-compose workflow that sets up a LEMP network of containers for local development. 
 
 
-## Usage
+#### Usage
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
 
@@ -10,9 +16,11 @@ Open a terminal and run `docker-compose up -d --build`. Open up your browser of 
 
 The following containers that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates inside your project root.
 
-- `docker-compose run --rm composer update`
-- `docker-compose run --rm npm run dev`
-- `docker-compose run --rm artisan migrate` 
+~~~~
+docker-compose run --rm composer update
+docker-compose run --rm npm run dev
+docker-compose run --rm artisan migrate
+~~~~ 
 
 Containers created and their ports (if used) are as follows:
 
@@ -25,6 +33,20 @@ Containers created and their ports (if used) are as follows:
 - **composer**
 - **artisan**
 
+## Set up local development environment
+
+For this tutorial i will use my bash alias as described below.
+
+1. Clone or download this repository. Ideally somewhere where docker has write access. For example in the `/Users` directory. _(macOS)_
+2. Set up docker as described above and go to your project root. _(The directory in which the `docker-compose.yml is located)_
+3. The first thing we need to do is install Composer. To do this, run `dcr install composer`
+4. Next, copy the .env.example and delete the word .example from the file name. So that you only have one .env.
+5. Now we have to create a key for the .env. To do this, execute the following command: `dca key:generate`
+6. Next, run `dcr npm install` to install all packages from the `package.json`
+7. The last thing we need to do is migrate the database. To do this, run the following command: `dca migrate —seed`
+
+Maybe this process is uncompleted. If so please let me know and i will take care of it.
+
 ## Sensible shell alias
 
 - **dc** - `docker-compose`
@@ -33,11 +55,11 @@ Containers created and their ports (if used) are as follows:
 
 To use it put the following into your `~/.zshrc`:
 
-`alias dc="docker-compose"`
-
-`alias dcr="docker-compose run --rm"`
-
-`alias dca="docker-compose run --rm artisan"`
+~~~~
+alias dc="docker-compose"
+alias dcr="docker-compose run --rm"
+alias dca="docker-compose run --rm artisan"
+~~~~
 
 ## Install Laravel Telescope
 
@@ -45,8 +67,9 @@ Laravel Telescope is an elegant debug assistant for the Laravel framework. Teles
 
 Telescope is preconfigured, if you wanne use it execute the following commands.
 
-
-1. `dca telescope:install`
-2. `dca migrate`
+~~~~
+1. dca telescope:install
+2. dca migrate
+~~~~
 
 You can reach telesope at the following URL: [http://localhost:8080/telescope](http://localhost:8080/telescope)
