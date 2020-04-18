@@ -39,15 +39,16 @@ For this tutorial i will use my bash alias as described below.
 
 1. Clone or download this repository. Ideally somewhere where docker has write access. For example in the `/Users` directory. _(macOS)_
 2. Set up docker as described above and go to your project root. _(The directory in which the `docker-compose.yml` is located)_
-3. The first thing we need to do is install Composer. To do this, run `dcr install composer`
-4. Next, copy the `.env.example` and delete the word `.example` from the file name. So that you only have one `.env`.
-5. Now we have to create a key for the `.env`. To do this, execute the following command: `dca key:generate`
-6. Next, run `dcr npm install` to install all packages from the `package.json`
-7. The last thing we need to do is migrate the database. To do this, run the following command: `dca migrate —seed`
+3. Open a browser of your choice and go to the following URL: [http://localhost:8080](http://localhost:8080)
+4. The first thing we need to take care of is to install Composer. To do this, run `dcr install composer`
+5. Next, copy the `.env.example` and delete the word `.example` from the file name. So that you only have one `.env`.
+6. Now we have to create a key for the `.env`. To do this, execute the following command: `dca key:generate`
+7. Next, run `dcr npm install` to install all packages from the `package.json`
+8. The last thing we need to do is migrate the database. To do this, run the following command: `dca migrate —seed`
 
 Maybe this process is uncompleted. If so please let me know and i will take care of it.
 
-## Sensible shell alias
+## Sensible shell alias (zsh)
 
 - **dc** - `docker-compose`
 - **dcr** - `docker-compose run --rm`
@@ -60,6 +61,8 @@ alias dc="docker-compose"
 alias dcr="docker-compose run --rm"
 alias dca="docker-compose run --rm artisan"
 ~~~~
+
+I'm pretty sure you can use it in every other shell in a similar way.
 
 ## Install Laravel Telescope
 
