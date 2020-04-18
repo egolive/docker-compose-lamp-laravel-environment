@@ -14,16 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    $club = factory(\App\Club::class)->create();
-
-    $club->members()->create([
-        'name' => 'Test'
-    ]);
-
-    dd($club->members);
+    return view('club.index');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/club', 'ClubController@index')->name('club.index');
