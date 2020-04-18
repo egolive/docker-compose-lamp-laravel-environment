@@ -49,6 +49,28 @@ services:
     networks:
       - laravel
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - mysql:db
+    ports:
+      - "8082:80"
+    environment:
+      - PMA_USER=root
+      - PMA_PASSWORD=secret
+      - PHP_UPLOAD_MAX_FILESIZE=100MB
+    networks:
+        - laravel
+
+  maildev:
+    image: djfarrelly/maildev
+    container_name: maildev
+    ports:
+      - "8081:80"
+    networks:
+      - laravel
+
   composer:
     image: composer:latest
     container_name: composer
