@@ -1,0 +1,51 @@
+<VirtualHost *:80>
+    ServerName docker-local
+    DocumentRoot /var/www/public
+
+    SetEnv ENVIRONMENT docker
+
+    <Directory /var/www/public>
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+
+    <Directory /var/www/public>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+
+    CustomLog /dev/stdout combined
+    ErrorLog /dev/sdterr
+</VirtualHost>
+
+<IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+        ServerAdmin florian.dehn@jarltech.com
+        DocumentRoot /var/www/public
+
+        SetEnv ENVIRONMENT docker
+
+        <Directory /var/www/public>
+            Options FollowSymLinks
+            AllowOverride None
+        </Directory>
+
+        <Directory /var/www/public>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Order allow,deny
+            allow from all
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/docker-local.log
+        LogLevel warn
+        CustomLog ${APACHE_LOG_DIR}/docker-local.log combined
+
+        SSLEngine on
+        SSLCertificateFile    /etc/apache2/ssl/ssl.crt
+        SSLCertificateKeyFile /etc/apache2/ssl/ssl.key
+        SSLCertificateChainFile /etc/apache2/ssl/ssl.crt
+    </VirtualHost>
+</IfModule>

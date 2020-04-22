@@ -1,0 +1,54 @@
+version: "3"
+services:
+    development:
+        build: .
+        container_name: daluma
+        depends_on:
+            - database
+        hostname: development
+        links:
+            - "database:database"
+        ports:
+            - "80:80"
+        networks:
+            - daluma-env
+        volumes:
+            - ./../htdocs:/var/www:cached
+            - ./apache/vhost.txt:/etc/apache2/sites-enabled/docker-php.conf:cached
+            - ./php/xdebug.ini:/etc/php/7.2/mods-available/xdebug.ini:cached
+            - ./php/cli/php.ini:/etc/php/7.2/cli/php.ini:cached
+            - ./php/fpm/php.ini:/etc/php/7.2/fpm/php.ini:cached
+    database:
+        image: mysql/mysql-server:5.7.29
+        container_name: database
+        environment:
+            - MYSQL_DATABASE=laravel
+            - MYSQL_USER=laravel
+            - MYSQL_PASSWORD=password
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_ROOT_HOST=%
+        ports:
+            - "3306:3306"
+        networks:
+            - daluma-env
+        hostname: database
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            -   "8080:80"
+        networks:
+            - daluma-env
+        environment:
+            - "PMA_HOST=database"
+            - "PMA_USER=root"
+            - "PMA_PASSWORD=password"
+    maildev:
+        image: djfarrelly/maildev
+        container_name: maildev
+        ports:
+            - "8081:80"
+        networks:
+            - daluma-env
+
+networks:
+    daluma-env:
