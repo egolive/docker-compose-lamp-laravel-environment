@@ -41,8 +41,8 @@ Laravel Telescope is an elegant debug assistant for the Laravel framework. Teles
 Telescope is preconfigured, if you wanne use it execute the following commands.
 
 ~~~~
-1. pa telescope:install
-2. pa migrate
+1. php artisan telescope:install
+2. php artisan migrate
 ~~~~
 
 You can reach telesope at the following URL: [http://localhost:8080/telescope](http://localhost:8080/telescope)
