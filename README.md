@@ -23,7 +23,7 @@ Containers created and their ports (if used) are as follows:
 
 ## Set up local development environment
 
-1. Clone or download this repository. Ideally somewhere where docker has write access. For example in the `/Users` directory. _(macOS)_
+1. Clone or download this repository. Ideally somewhere where docker has write access. For example in the `/Users/*` directory. _(macOS)_
 2. Set up docker as described above and go to your project root. _(The directory in which the `docker-compose.yml` is located)_
 3. Open a browser of your choice and go to the following URL: [http://localhost](http://localhost)
 4. The first thing we need to take care of is to install Composer. To do this, run `install composer`
