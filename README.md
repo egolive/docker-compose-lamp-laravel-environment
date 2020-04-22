@@ -12,7 +12,7 @@ VeVeTo uses a docker-compose workflow that sets up a LAMP network of containers 
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
 
-Open a terminal and run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost:8080](http://localhost:8080) and you should see the VeVeTo app running as intended. 
+Open a terminal and run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost](http://localhost) and you should see the VeVeTo app running as intended. 
 
 Containers created and their ports (if used) are as follows:
 
@@ -25,7 +25,7 @@ Containers created and their ports (if used) are as follows:
 
 1. Clone or download this repository. Ideally somewhere where docker has write access. For example in the `/Users` directory. _(macOS)_
 2. Set up docker as described above and go to your project root. _(The directory in which the `docker-compose.yml` is located)_
-3. Open a browser of your choice and go to the following URL: [http://localhost:8080](http://localhost:8080)
+3. Open a browser of your choice and go to the following URL: [http://localhost](http://localhost)
 4. The first thing we need to take care of is to install Composer. To do this, run `install composer`
 5. Next, copy the `.env.example` and delete the word `.example` from the file name. So that you only have one `.env`.
 6. Now we have to create a key for the `.env`. To do this, execute the following command: `php artisan key:generate`
@@ -45,7 +45,7 @@ Telescope is preconfigured, if you wanne use it execute the following commands.
 2. php artisan migrate
 ~~~~
 
-You can reach telesope at the following URL: [http://localhost:8080/telescope](http://localhost:8080/telescope)
+You can reach telesope at the following URL: [http://localhost/telescope](http://localhost/telescope)
 
 ## Sensible shell alias (zsh)
 
