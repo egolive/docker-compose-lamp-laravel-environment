@@ -54,3 +54,8 @@ alias dce="docker-compose exec development bash"
 ~~~~
 
 I'm pretty sure you can use it in every other shell in a similar way.
+
+## Credits
+
+This project is based on florian dehn's php docker runtime:
+[https://github.com/katzefudder/docker_php_runtime](https://github.com/katzefudder/docker_php_runtime)
