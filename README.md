@@ -41,7 +41,7 @@ Telescope is preconfigured, if you wanne use it execute the following commands.
 
 You can reach telesope at the following URL: [http://localhost/telescope](http://localhost/telescope)
 
-## Sensible shell alias (zsh)
+## Sensible shell aliases (zsh)
 
 - **dc** - `docker-compose`
 - **dce** - `docker-compose exec development bash`
