@@ -1,6 +1,6 @@
 # docker-compose-lamp-laravel-environment
 
-A docker-compose workflow that sets up a LAMP network of containers for local development.
+A docker-compose workflow that sets up a LAMP software bundle of containers for local development.
 
 #### Usage
 
