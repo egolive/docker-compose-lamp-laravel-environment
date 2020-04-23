@@ -2,7 +2,7 @@ version: "3"
 services:
     development:
         build: .
-        container_name: daluma
+        container_name: app
         depends_on:
             - database
         hostname: development
@@ -11,7 +11,7 @@ services:
         ports:
             - "80:80"
         networks:
-            - daluma-env
+            - app-env
         volumes:
             - ./../htdocs:/var/www:cached
             - ./apache/vhost.txt:/etc/apache2/sites-enabled/docker-php.conf:cached
@@ -30,14 +30,14 @@ services:
         ports:
             - "3306:3306"
         networks:
-            - daluma-env
+            - app-env
         hostname: database
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         ports:
             -   "8080:80"
         networks:
-            - daluma-env
+            - app-env
         environment:
             - "PMA_HOST=database"
             - "PMA_USER=root"
@@ -48,7 +48,7 @@ services:
             - "1025:1025"
             - "8025:8025"
         networks:
-            - daluma-env
+            - app-env
 
 networks:
-    daluma-env:
+    app-env:

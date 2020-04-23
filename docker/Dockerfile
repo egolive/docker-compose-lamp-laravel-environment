@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-LABEL maintainer="Daniel Ehrenhofer <dehrenhofer@daluma-websolutions.de>" description="Docker PHP Runtime " Vendor="http://daluma-websolutions.de"
+LABEL maintainer="John Doe <info@app.com>" description="docker-compose-lamp-laravel-environment" Vendor="http://app.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -18,7 +18,7 @@ RUN chown www-data: /var/www -R && chmod -R 777 /var/www \
 && a2dissite 000-default && a2enmod rewrite
 
 # * * * * * * * * * set server name
-RUN echo "ServerName daluma.local" >> /etc/apache2/apache2.conf
+RUN echo "ServerName app.local" >> /etc/apache2/apache2.conf
 
 # * * * * * * * * * install composer && nodejs
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer && curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
