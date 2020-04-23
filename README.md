@@ -13,7 +13,7 @@ Containers created and their ports (if used) are as follows:
 - **apache** - `80:80`
 - **mysql** - `:3306`
 - **phpMyAdmin** - `:8080`
-- **MailDev** - `:8081`
+- **MailHog** - `:8025`
 
 ## Set up local development environment
 
