@@ -1,18 +1,12 @@
-# VeVeTo
+# docker-compose-lamp-laravel-environment
 
-Management system of the HPBV for all administrative tasks.
-Programmed by DaluMa Websolutions.
-
-## docker-compose workflow
-
-VeVeTo uses a docker-compose workflow that sets up a LAMP network of containers for local development. 
-
+A docker-compose workflow that sets up a LAMP network of containers for local development.
 
 #### Usage
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
 
-Open a terminal and run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost](http://localhost) and you should see the VeVeTo app running as intended. 
+Open a terminal and run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost](http://localhost) and you should see the your app running as intended. 
 
 Containers created and their ports (if used) are as follows:
 

@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('club.index');
+    return view('home');
 });
 
 Auth::routes();
-
-Route::get('/club', 'ClubController@index')->name('club.index');
