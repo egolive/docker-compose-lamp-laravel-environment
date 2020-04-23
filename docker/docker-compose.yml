@@ -42,11 +42,11 @@ services:
             - "PMA_HOST=database"
             - "PMA_USER=root"
             - "PMA_PASSWORD=password"
-    maildev:
-        image: djfarrelly/maildev
-        container_name: maildev
+    mailhog:
+        image: mailhog/mailhog
         ports:
-            - "8081:80"
+            - "1025:1025"
+            - "8025:8025"
         networks:
             - daluma-env
 
