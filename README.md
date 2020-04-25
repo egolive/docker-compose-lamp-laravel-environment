@@ -1,3 +1,5 @@
+![Build](https://github.com/egolive/docker-compose-lamp-laravel-environment/workflows/Build/badge.svg)
+
 # docker-compose-lamp-laravel-environment
 
 A docker-compose workflow that sets up a LAMP software bundle of containers for local development.
