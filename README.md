@@ -1,5 +1,5 @@
 ![Build](https://github.com/egolive/docker-compose-lamp-laravel-environment/workflows/Build/badge.svg)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/egolive/StrapDown.js/graphs/commit-activity) [![GitHub issues](https://img.shields.io/github/issues/egolive/docker-compose-lamp-laravel-environment.svg)](https://GitHub.com/egolive/docker-compose-lamp-laravel-environment/issues/) [![GitHub release](https://img.shields.io/github/release/egolive/docker-compose-lamp-laravel-environment.svg)](https://GitHub.com/egolive/docker-compose-lamp-laravel-environment/releases/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/egolive/StrapDown.js/graphs/commit-activity) [![GitHub issues](https://img.shields.io/github/issues/egolive/docker-compose-lamp-laravel-environment.svg)](https://GitHub.com/egolive/docker-compose-lamp-laravel-environment/issues/) [![GitHub release](https://img.shields.io/github/release/egolive/docker-compose-lamp-laravel-environment.svg)](https://GitHub.com/egolive/docker-compose-lamp-laravel-environment/releases/) [![GitHub license](https://img.shields.io/github/license/egolive/docker-compose-lamp-laravel-environment.svg)](https://github.com/egolive/docker-compose-lamp-laravel-environment/blob/master/LICENSE)
 
 # docker-compose-lamp-laravel-environment
 
