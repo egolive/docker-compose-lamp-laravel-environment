@@ -22,7 +22,7 @@
 
 <IfModule mod_ssl.c>
     <VirtualHost _default_:443>
-        ServerAdmin florian.dehn@jarltech.com
+        ServerAdmin admin@app.com
         DocumentRoot /var/www/public
 
         SetEnv ENVIRONMENT docker
