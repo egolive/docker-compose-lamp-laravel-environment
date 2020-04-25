@@ -18,13 +18,14 @@ Containers created and their ports (if used) are as follows:
 ## Set up local development environment
 
 1. Clone or download this repository. Ideally somewhere where docker has write access. For example in the `/Users/*` directory. _(macOS)_
-2. Set up docker as described above and go to your project root. _(The directory in which the `docker-compose.yml` is located)_
-3. Open a browser of your choice and go to the following URL: [http://localhost](http://localhost)
-4. The first thing we need to take care of is to install Composer. To do this, run `install composer`
-5. Next, copy the `.env.example` and delete the word `.example` from the file name. So that you only have one `.env`.
-6. Now we have to create a key for the `.env`. To do this, execute the following command: `php artisan key:generate`
-7. Next, run `npm install` to install all packages from the `package.json`
-8. The last thing we need to do is migrate the database. To do this, run the following command: `php artisan migrate —seed`
+2. Go to your root directory and the `/docker/` directory in it.  _(The directory in which the `docker-compose.yml` is located)_. Open a terminal and run `docker-compose up -d --build`.
+3. Open a browser of your choice and go to the following URL: [http://localhost](http://localhost). You should see your app running as intended. 
+4. Now we need to open a shell at the web server. To do this, go back to your terminal and run `docker-compose exec development bash`. It should be noted at this point that we communicate with the web server via Docker. That means to talk to the web server we use the `docker-compose.yml`. To do this we have to be in the `/docker/` directory in which the `docker-compose.yml` is located. 
+5. The first thing we need to take care of is to install Composer. To do this, run `install composer`
+6. Next, copy the `.env.example` and delete the word `.example` from the file name. So that you only have one `.env`.
+7. Now we have to create a key for the `.env`. To do this, execute the following command: `php artisan key:generate`
+8. Next, run `npm install` to install all packages from the `package.json`
+9. The last thing we need to do is migrate the database. To do this, run the following command: `php artisan migrate —seed`
 
 Maybe this process is uncompleted. If so please let me know and i will take care of it.
 
